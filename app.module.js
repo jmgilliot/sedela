@@ -1,4 +1,4 @@
-angular.module('browserapp', ['ngRoute']).config(appConfig);
+angular.module('portfolioapp', ['ngRoute']).config(appConfig);
 
 appConfig.$inject = ['$routeProvider'];
 

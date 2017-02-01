@@ -1,8 +1,8 @@
 {
-  "name": "cozysdk-client-tuto",
+  "name": "Portfolio Application",
   "version": "0.0.1",
-  "description": "An application to get you started with serverless web app development and Cozy.",
+  "description": "A portfolio application in Cozy",
   "cozy-type": "static",
-  "cozy-displayName": "Serverless app example",
+  "cozy-displayName": "My Portfolio",
   "icon-path": "main_icon.png"
 }

@@ -1,4 +1,4 @@
-angular.module('browserapp',['ui-bootstrap']).controller('HomeAngCtrl', HomeAngCtrl);
+angular.module('portfolioapp').controller('HomeAngCtrl', HomeAngCtrl);
 
 function HomeAngCtrl(CozySdk) {
     var vm = this;

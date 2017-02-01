@@ -1,4 +1,4 @@
-angular.module('browserapp').factory('CozySdk', CozySdk);
+angular.module('portfolioapp').factory('CozySdk', CozySdk);
 
 CozySdk.$inject = ['$q'];
 
