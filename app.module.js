@@ -1,16 +1,21 @@
-angular.module('portfolioapp', ['ngRoute']).config(appConfig);
+'use strict';
+
+// Declare app level module which depends on views, and components
+angular.module('portfolioapp', [
+  'ngRoute',
+  'ui.bootstrap'
+]).
+config(appConfig);
+
 
 appConfig.$inject = ['$routeProvider'];
 
-function appConfig($routeProvider) {
-	$routeProvider.when('/', {
-		// Path of the view
-		templateUrl: 'partials/home.html',
-		// name of the controller
-		controller: 'HomeAngCtrl',
-		controllerAs: 'contactCtrl'
-	});
-	$routeProvider.otherwise({
-		redirectTo: '/'
-	});
+function appConfig($routeProvider){
+	$routeProvider.
+	when("/", {
+		templateUrl: "partials/home.html",
+		controller: "HomeController"
+ 	}).
+	otherwise({redirectTo: '/'});
 };
+
