@@ -1,7 +1,15 @@
+.box.box-warning {
+    border-top-color: #f39c12;
+}
+
 .box-body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     padding: 10px;
+}
+
+.box-header.with-border {
+    border-bottom: 1px solid #f4f4f4;
 }
