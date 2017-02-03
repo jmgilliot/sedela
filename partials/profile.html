@@ -8,21 +8,21 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <form role="form">
+              <form role="form" name="profileForm">
                 <!-- nom -->
                 <div class="form-group">
                   <label>Nom</label>
-                  <input type="text" class="form-control" placeholder="Enter ...">
+                  <input type="text" class="form-control" placeholder="Nom ..." ng-model="lastName" required>
                 </div>
                 <!-- Prénom -->
                 <div class="form-group">
                   <label>Prénom</label>
-                  <input type="text" class="form-control" placeholder="Enter ..." disabled>
+                  <input type="text" class="form-control" placeholder="Prénom ..." ng-model="firstName" required>
                 </div>
                 <!-- email -->
                 <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" class="form-control" placeholder="Email" ng-model="email" required>
               </div>
 
                 <!-- Date de naissance-->
@@ -33,7 +33,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" id="datepicker">
+                  <input type="text" class="form-control pull-right" id="datepicker" ng-model="dateOfBirth" required>
                 </div>
                 <!-- /.input group -->
               </div>
@@ -47,7 +47,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-phone"></i>
                   </div>
-                  <input type="text" class="form-control" data-inputmask='"mask": "(+33) 9-99-99-99-99"' data-mask>
+                  <input type="text" class="form-control" data-inputmask='"mask": "99-99-99-99-99"' data-mask ng-model="phone" required>
                 </div>
                 <!-- /.input group -->
               </div>
@@ -56,25 +56,28 @@
               <!-- Situation profesionnelle -->
               <div class="form-group">
                   <label>Situation professionnelle</label>
-                  <input type="text" class="form-control" placeholder="Entrez votre situation professionnelle (poste)">
+                  <input type="text" class="form-control" placeholder="Entrez votre situation professionnelle (poste)" ng-model="situation" required>
               </div>
 
                <!-- Loisirs -->
               <div class="form-group">
                   <label>Loisirs</label>
-                  <input type="text" class="form-control" placeholder="Entrez vos loisirs">
+                  <input type="text" class="form-control" placeholder="Entrez vos loisirs", ng-model="hobbies" required>
               </div>
 
                <!-- Mot clés -->
               <div class="form-group">
                   <label>Mots clés</label>
-                  <input type="text" class="form-control" placeholder="Entrez vos mots clés, séparés d'une virgule">
+                  <input type="text" class="form-control" placeholder="Entrez vos mots clés, séparés d'une virgule", ng-model="keywords">
               </div>
               <!-- textarea -->
                 <div class="form-group">
                   <label>Description</label>
-                  <textarea class="form-control" rows="3" placeholder="Entrez une petite description de vous même"></textarea>
+                  <textarea class="form-control" rows="3" placeholder="Entrez une petite description de vous même" ng-model="description"></textarea>
                 </div>
+
+
+              <input type="submit" ng-click="ProfileController.send(ProfileController.profile)" class="btn btn-info" value="Enregistrer">
 
               </form>
             </div>
