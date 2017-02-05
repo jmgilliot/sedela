@@ -20,5 +20,9 @@ function appConfig($routeProvider){
  		templateUrl: 'partials/profile.html',
  		controller:'ProfileController'
  	}).
+ 	when('/stage',{
+ 		templateUrl: 'partials/stage.html',
+ 		controller:'StageController'
+ 	}).
 	otherwise({redirectTo: '/home'});
 };

@@ -1,3 +1,8 @@
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h2>Editer mon profil</h2>
+        </section>
 <!-- Main content -->
     <section class="content">
       
@@ -6,23 +11,32 @@
             <div class="box-header with-border">
               <h3 class="box-title">Mon profil</h3>
             </div>
+
+
+          <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+          </div>
+
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="panel panel-default">
               <form role="form" name="profileForm">
                 <!-- nom -->
                 <div class="form-group">
                   <label>Nom</label>
-                  <input type="text" class="form-control" placeholder="Nom ..." ng-model="lastName" required>
+                  <input type="text" class="form-control" placeholder="Nom ..." ng-model="userProfile.lastName">
                 </div>
                 <!-- Prénom -->
                 <div class="form-group">
                   <label>Prénom</label>
-                  <input type="text" class="form-control" placeholder="Prénom ..." ng-model="firstName" required>
+                  <input type="text" class="form-control" placeholder="Prénom ..." ng-model="userProfile.firstName" required>
                 </div>
                 <!-- email -->
                 <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                <input type="email" class="form-control" placeholder="Email" ng-model="email" required>
+                <input type="email" class="form-control" placeholder="Email" ng-model="userProfile.email" required>
               </div>
 
                 <!-- Date de naissance-->
@@ -33,7 +47,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" id="datepicker" ng-model="dateOfBirth" required>
+                  <input type="text" class="form-control pull-right" id="datepicker" ng-model="userProfile.dateOfBirth" required>
                 </div>
                 <!-- /.input group -->
               </div>
@@ -47,7 +61,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-phone"></i>
                   </div>
-                  <input type="text" class="form-control" data-inputmask='"mask": "99-99-99-99-99"' data-mask ng-model="phone" required>
+                  <input type="text" class="form-control" data-inputmask='"mask": "99-99-99-99-99"' data-mask ng-model="userProfile.phone" required>
                 </div>
                 <!-- /.input group -->
               </div>
@@ -56,28 +70,27 @@
               <!-- Situation profesionnelle -->
               <div class="form-group">
                   <label>Situation professionnelle</label>
-                  <input type="text" class="form-control" placeholder="Entrez votre situation professionnelle (poste)" ng-model="situation" required>
+                  <input type="text" class="form-control" placeholder="Entrez votre situation professionnelle (poste)" ng-model="userProfile.situation" required>
               </div>
 
                <!-- Loisirs -->
               <div class="form-group">
                   <label>Loisirs</label>
-                  <input type="text" class="form-control" placeholder="Entrez vos loisirs", ng-model="hobbies" required>
+                  <input type="text" class="form-control" placeholder="Entrez vos loisirs", ng-model="userProfile.hobbies" required>
               </div>
 
                <!-- Mot clés -->
               <div class="form-group">
                   <label>Mots clés</label>
-                  <input type="text" class="form-control" placeholder="Entrez vos mots clés, séparés d'une virgule", ng-model="keywords">
+                  <input type="text" class="form-control" placeholder="Entrez vos mots clés, séparés d'une virgule", ng-model="userProfile.keywords">
               </div>
               <!-- textarea -->
                 <div class="form-group">
                   <label>Description</label>
-                  <textarea class="form-control" rows="3" placeholder="Entrez une petite description de vous même" ng-model="description"></textarea>
+                  <textarea class="form-control" rows="3" placeholder="Entrez une petite description de vous même" ng-model="userProfile.description"></textarea>
                 </div>
 
-
-              <input type="submit" ng-click="ProfileController.send(ProfileController.profile)" class="btn btn-info" value="Enregistrer">
+              <input type="submit" ng-click=")" class="btn btn-info" value="Enregistrer">
 
               </form>
             </div>
