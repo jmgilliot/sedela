@@ -9,11 +9,13 @@ ProfileController.$inject = ['CozySdk'];
 function ProfileController(CozySdk) {
       var vm = this;
 
-    function insertProfile() {
+      insertProfile();
 
-var attributes = {title:"hello", content:"world"}
-CozySdk.create('Note', attributes, function(err, obj){
-    console.log(obj.id)
+
+    function insertProfile() {
+CozySdk.create('Note', {title:"hello123", content:"world"}, function(err, obj){
+    console.log(err)
+    alert('Cozy cest de la merde');
 });
 
     
