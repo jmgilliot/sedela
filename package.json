@@ -4,5 +4,9 @@
   "description": "A portfolio application in Cozy",
   "cozy-type": "static",
   "cozy-displayName": "My Portfolio",
-  "icon-path": "main_icon.png"
+  "icon-path": "main_icon.png",
+  "cozy-permissions": {
+    "Profile": "Insérer ton profil",
+    "Note": "Insérer une note"
+  }
 }
