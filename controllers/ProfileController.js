@@ -8,18 +8,23 @@ ProfileController.$inject = ['CozySdk'];
 
 function ProfileController(CozySdk) {
       var vm = this;
+      vm.insertProfile = insertProfile;
 
-      insertProfile();
 
-
-    function insertProfile() {
-CozySdk.create('Note', {title:"hello123", content:"world"}, function(err, obj){
-    console.log(err)
-    alert('Cozy cest de la merde');
-});
+        function resetForm() {
+        var defaultForm = {};
+        vm.profile = angular.copy(defaultForm);
+      }
+   
+    function insertProfile(user) {
+        CozySdk.create('Profile', user)
+        .then(resetForm)
+        .catch(function(error) {
+          vm.error = error;
+        });
+    }
 
     
-    }
 
   }
 

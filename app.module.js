@@ -18,7 +18,8 @@ function appConfig($routeProvider){
  	}).
  	when('/profile',{
  		templateUrl: 'partials/profile.html',
- 		controller:'ProfileController'
+ 		controller:'ProfileController',
+ 		controllerAs:'ProfilCtrl'
  	}).
  	when('/stage',{
  		templateUrl: 'partials/stage.html',
