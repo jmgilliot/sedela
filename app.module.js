@@ -21,6 +21,11 @@ function appConfig($routeProvider){
  		controller:'ProfileController',
  		controllerAs:'ProfilCtrl'
  	}).
+ 	when('/editProfile',{
+ 		templateUrl: 'partials/editProfile.html',
+ 		controller:'EditProfileController',
+ 		controllerAs:'EditProfilCtrl'
+ 	}).
  	when('/stage',{
  		templateUrl: 'partials/stage.html',
  		controller:'StageController'
