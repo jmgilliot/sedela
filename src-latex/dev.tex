@@ -1,0 +1,34 @@
+\chapter{Développement technique}
+
+
+
+\section{Choix techniques et architecture mise en oeuvre}
+
+Nous allons voir dans cette partie les choix que nous avons effectués au niveau technique et les fonctionnalités que nous avons implémentées. 
+\subsection{Une application "clientside"}
+
+L'architecture version 2 de Cozy Cloud permet le développement d'applications en ne se focalisant que sur le développement de la partie cliente (frontend). Cozy propose une API pour accéder et gérer les données de l'utilisateur. De plus l'authentification est également gérée par Cozy, ce qui permet de ne se concentrer que sur les fonctionnalités que l'on souhaite mettre en oeuvre. Cela permet également de choisir son framework favori pour développer.  
+
+\newpage{}
+
+\subsection{Un framework frontend : AngularJS}
+
+Nous avons choisi de développer en utilisant le framework AngularJS de Google. Ce choix s'explique par deux raisons principales : 
+
+\begin{itemize}
+\item Premièrement, il s'agit du framework sur lequel nous possédions le plus de connaissances;
+\item Deuxièmement, le tutoriel disponible propose une partie dédiée à AngularJS;
+\end{itemize}
+
+Ainsi un squelette d'application cliente était disponible de le répertoire Github de Cozy. Ce fut un point de départ intéressant pour nous. L'application se décompose en trois partie architecturées en MVC (Model-View-Controller). Ici le modèle est fourni par Cozy pour les fonctionnalités de CRUD (Create Read Update Delete). Les vues sont organisées de manières à ce quelles soit chargées par le biais d'un menu unique. Elles vont affichés le contenu (formulaires de saisie, documents dans la base). En ce qui concerne les contrôleurs, ce sont eux qui vont faire le lien entre la vue (et la saisie de l'utilisateur par exemple) et l'insertion ou lecture dans la base par le biais des fonctions de CRUD.  
+
+
+
+\newpage
+
+
+\section{Fonctionnalités développées}
+
+\subsection{Les fonctionnalités}
+\subsection{Le modèle de données}
+\subsection{Les améliorations possibles et les fonctionnalités à développer}

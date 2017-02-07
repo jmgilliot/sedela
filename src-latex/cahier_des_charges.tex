@@ -1,0 +1,100 @@
+\chapter{Cahier des charges fonctionnel}
+
+Dans cette partie, nous présentons le cahier des charges fonctionnel du projet de développement \gls{MGP321}
+
+\section{Présentation d'ensemble du projet}
+
+\subsection{Présentation de l’équipe en charge du projet}
+
+Dans le cadre du projet de développement de troisième année de la formation FIP de l’IMT Atlantique, deux étudiants sont en charge d’une implémentation d’une première version du projet Sedela. Il s’agit de Jordan Arzel et de Nicolas Tanguy. Le projet de FIP de 3ème année a une durée de 3 semaines à temps plein. \\
+
+Un étudiant de troisième année de la formation FIG de l’IMT Atlantique participe aussi, à mi-temps, à la réalisation de ce projet et assurera le développement futur de l’application, après la fin du projet FIP. Il aura pour but de poursuivre l’implémentation du projet et de sa mise en œuvre auprès des futurs étudiants de l’université de Rennes 2.
+
+\subsection{Situation actuelle et problèmes rencontrés}
+
+Actuellement, il n’existe pas d’outil de type Portfolio satisfaisant pour exposer ses compétences dans les universités. \\
+
+De plus, deux principaux problèmes ont été identifiés: \\
+
+\begin{itemize}
+    \item de manière générale, la réflexion pédagogique menée en amont de la production et/ou du choix d’un outil est trop souvent insuffisante (voire inexistante) ; ce qui a pour conséquences :
+    \item d’avoir un outil rarement adapté aux besoins / services du projet pédagogique
+    \item qui est à plus ou moins long terme abandonné (exemples : abandon de Wordpress car trop technique; abandon de Mahara car paramétrage échappant aux équipes pédagogiques (+ absence de communication en réseaux sur les besoins réels de terrain); abandon de Wix (question d’ergonomie) ; limites et contraintes des ENT…)
+\end{itemize}
+
+
+\subsection{Les objectifs du projet }
+
+L’objectif principal du projet est de réaliser un « Portfolio » : un portfolio est un dossier personnel dans lequel les acquis de formation et les acquis de l’expérience d’une personne sont exposés, en vue d’une reconnaissance personnelle ou celle d’un employeur. C’est un « portefeuille » de connaissance. \\
+
+Le but est de créer et d’expérimenter un outil pour l’utilisation et le classement des données personnelles, formatives, ou professionnelles, et ce dans une démarche d’apprentissage tout au long de la vie.	
+
+
+\subsection{La cible de ce projet}
+
+La cible de l’outil produit sera dans un premier temps les étudiants de l’université de Rennes 2 et de l’UBO dans un but d’expérimentation de l’outil. 
+Dans un second temps, l’idée est de proposer cet outil à tous les étudiants et anciens étudiants.
+
+
+\subsection{Périmètre du projet}
+
+Les pages seront accessibles sur tous types de plateformes (mobiles notamment).
+
+
+\section{Description graphique et ergonomique}
+
+\subsection{Charte graphique & design:}
+
+Pour la partie privée, nous utiliserons la charte graphique de Cozy Cloud.
+
+Pour la partie publique, nous utiliserons un design moderne (ex : Bootstrap).
+
+\subsection{Maquette}
+
+Voici plusieurs maquettes :
+
+\section{Description fonctionnelle et technique}
+
+\subsection{Description fonctionnelle}
+
+A terme, les fonctions générales du portfolio attendus sont les suivantes :
+
+Fonctions principales : \\
+
+\begin{itemize}
+    \item Possibilité de renseigner ses informations personnelles (page privée) : Création de son «profil : Nom, prénoms, adresse, etc. Emploi, formations…
+    \item Possibilité de publier son CV (page publique)
+    
+    \item Possibilité d’avoir un espace où l’on peut déposer des documents
+
+\end{itemize}
+
+Fonctions annexes : \\
+
+\begin{itemize}
+    \item Synchronisation des données personnelles : Import des contacts
+    \item ¬	Mise à disposition d’un agenda : Import d’agenda
+    \item ¬	Ajout d’outils complémentaires :Vidéo, tchat, espaces de travails partagés
+
+
+\end{itemize}
+
+\subsection{Contraintes techniques}
+
+Nous utiliserons la plateforme de cloud personnelle Cosy Cloud pour développer notre portfolio. Celui-ci sera en fait une application à part entière de notre plateforme Cosy Cloud. Notre application devra donc utiliser le langage JavaScript pour les pages web (plateforme NodeJS), et reposera sur Mongo DB pour la base de données. \\
+Les données seront stockées de façon privée sur Cozy Cloud. 
+
+
+\section{Objectifs du projet en FIP3A (MGP321)}
+
+\subsection{Prestations attendus pour le projet }
+
+Pour le projet FIP 3A, les objectifs sont les suivants :
+
+\begin{itemize}
+    \item Réalisation d'une page d'accueil : page comportant, si le profil n'est pas rempli un message d'alerte.
+    \item Réalisation d'une page de profil : chaque utilisateur doit être en mesure de renseigner son profil utilisateur, de le modifier. 
+    \item Réalisation d'une page de "gestion des stages" : gestion et suivi du stage (ajout et sauvegarde de documents, formulaires de suivi de stage) \\
+\end{itemize}
+
+\\Les fonctions attendus lors de ce projet de FIP3A sont réduits compte tenu du fait de la formation à réaliser sur l'outil à utiliser et au temps réduit pour réaliser ce projet.
