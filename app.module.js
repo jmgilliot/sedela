@@ -28,7 +28,8 @@ function appConfig($routeProvider){
  	}).
  	when('/stage',{
  		templateUrl: 'partials/stage.html',
- 		controller:'StageController'
+ 		controller:'StageController',
+ 		controllerAs:'StageCtrl'
  	}).
 	otherwise({redirectTo: '/home'});
 };
