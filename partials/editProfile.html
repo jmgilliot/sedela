@@ -37,9 +37,8 @@
                     <div class="input-group-addon">
                       <i class="fa fa-vcard"></i>
                     </div>
-                    <input type="text" class="form-control" ng-model="EditProfilCtrl.profile.FirstName">
+                    <input type="text" class="form-control" ng-model="EditProfilCtrl.profile.value.firstName">
                   </div>
-                  <h1> {{EditProfilCtrl.profile.FirstName}}</h1>
                   <!-- /.input group -->
                 </div>
                    <!-- NOM -->
@@ -50,9 +49,8 @@
                     <div class="input-group-addon">
                       <i class="fa fa-vcard"></i>
                     </div>
-                    <input  type="text" class="form-control" placeholder="Nom" ng-model="EditProfilCtrl.profile.LastName">
+                    <input  type="text" class="form-control" placeholder="Nom" ng-model="EditProfilCtrl.profile.value.lastName">
                   </div>
-                  <h1> {{EditProfilCtrl.profile.LastName}}</h1>
                   <!-- /.input group -->
                 </div>
                 
@@ -64,7 +62,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" placeholder="Date de naissance" id="datepicker" ng-model="EditProfilCtrl.profile.dateOfBirth" required>
+                    <input type="text" class="form-control pull-right" placeholder="Date de naissance" id="datepicker" ng-model="EditProfilCtrl.profile.value.dateOfBirth" required>
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -76,7 +74,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-home"></i>
                     </div>
-                    <input type="text" class="form-control" placeholder="Adresse" ng-model="EditProfilCtrl.profile.address">
+                    <input type="text" class="form-control" placeholder="Adresse" ng-model="EditProfilCtrl.profile.value.address">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -88,7 +86,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-envelope"></i>
                     </div>
-                    <input type="email" class="form-control" placeholder="Email" ng-model="EditProfilCtrl.profile.email">
+                    <input type="email" class="form-control" placeholder="Email" ng-model="EditProfilCtrl.profile.value.email">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -104,7 +102,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-phone"></i>
                     </div>
-                    <input type="text" class="form-control" data-inputmask='"mask": "99-99-99-99-99"' data-mask ng-model="EditProfilCtrl.profile.phone" required>
+                    <input type="text" class="form-control" data-inputmask='"mask": "99-99-99-99-99"' data-mask ng-model="EditProfilCtrl.profile.value.phone" required>
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -118,7 +116,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-thumbs-o-up"></i>
                     </div>
-                    <input type="text" class="form-control" placeholder="Loisirs, séparés par un point virgule  " ng-model="EditProfilCtrl.profile.hobbies">
+                    <input type="text" class="form-control" placeholder="Loisirs, séparés par un point virgule  " ng-model="EditProfilCtrl.profile.value.hobbies">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -130,7 +128,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-key"></i>
                     </div>
-                    <input type="text" class="form-control" placeholder="Mots clés (séparés d'un point virgule)" ng-model="EditProfilCtrl.profile.keywords">
+                    <input type="text" class="form-control" placeholder="Mots clés (séparés d'un point virgule)" ng-model="EditProfilCtrl.profile.value.keywords">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -141,14 +139,14 @@
                     <div class="input-group-addon">
                       <i class="fa fa-user-circle-o"></i>
                     </div>
-                    <textarea class="form-control" rows="4" placeholder="Ecrivez une petite description de vous même" ng-model="EditProfilCtrl.profile.description"></textarea>
+                    <textarea class="form-control" rows="4" placeholder="Ecrivez une petite description de vous même" ng-model="EditProfilCtrl.profile.value.description"></textarea>
                   </div>
                   <!-- /.input group -->
                 </div>
                 <div class="row">
                   <button
                   class="btn btn-primary pull-right"
-                  type="submit" ng-click="EditProfilCtrl.insertProfile(EditProfilCtrl.profile)">Enregistrer</button>
+                  type="submit" ng-click="EditProfilCtrl.updateProfile(EditProfilCtrl.profile.id,EditProfilCtrl.profile.value)">Enregistrer</button>
                 </div>
 
               </div>
@@ -161,7 +159,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-graduation-cap"></i>
                       </div>
-                      <input type="text" class="form-control" placeholder="Diplôme" ng-model="EditProfilCtrl.profile.diplome">
+                      <input type="text" class="form-control" placeholder="Diplôme" ng-model="EditProfilCtrl.profile.value.diploma">
                     </div>
                     <!-- /.input group -->
                   </div>
@@ -173,7 +171,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-briefcase"></i>
                     </div>
-                    <input type="text" class="form-control" placeholder="Situation professionnelle" ng-model="EditProfilCtrl.profile.situation">
+                    <input type="text" class="form-control" placeholder="Situation professionnelle" ng-model="EditProfilCtrl.profile.value.occupation">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -185,7 +183,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-graduation-cap"></i>
                     </div>
-                    <textarea class="form-control" rows="4" placeholder="Ecrivez vos compétences, séparés par un point virgule" ng-model="EditProfilCtrl.profile.competences"></textarea>
+                    <textarea class="form-control" rows="4" placeholder="Compétences" ng-model="EditProfilCtrl.profile.value.skills"></textarea>
                   </div>
                   <!-- /.input group -->
                 </div>
