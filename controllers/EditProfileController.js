@@ -9,10 +9,8 @@ EditProfileController.$inject = ['CozySdk'];
 function EditProfileController(CozySdk) {
       var vm = this;
       vm.insertProfile = insertProfile;
-      vm.profiles = {};
-
+      vm.profile ={};
       updateProfileList();
-
 
       function updateProfileList() {
 
@@ -22,10 +20,11 @@ function EditProfileController(CozySdk) {
         })
         .then(function(res) {
           vm.profiles = res;
+          vm.profile = vm.profiles[1].value;
           console.log(JSON.stringify(vm.profiles));
-          console.log(JSON.stringify(vm.profiles[1].value.FirstName));
+          console.log(JSON.stringify(vm.profile));
 
-         // console.log(JSON.stringify(vm.profile));
+         // console.log(JSON.stringify(vm.profile));  
         })
         .catch(function(error) {
             vm.error = error;
@@ -53,6 +52,7 @@ function EditProfileController(CozySdk) {
    
     function insertProfile(profile) {
         CozySdk.create('Profile', profile)
+        .then(resetForm)
         .then(updateProfileList)
         .catch(function(error) {
           vm.error = error;
