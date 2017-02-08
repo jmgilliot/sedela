@@ -18,8 +18,8 @@ function appConfig($routeProvider){
  	}).
  	when('/profile',{
  		templateUrl: 'partials/profile.html',
- 		controller:'ProfileController',
- 		controllerAs:'ProfilCtrl'
+ 		controller:'EditProfileController',
+ 		controllerAs:'EditProfilCtrl'
  	}).
  	when('/editProfile',{
  		templateUrl: 'partials/editProfile.html',
@@ -30,6 +30,16 @@ function appConfig($routeProvider){
  		templateUrl: 'partials/stage.html',
  		controller:'StageController',
  		controllerAs:'StageCtrl'
+ 	}).
+ 	when('/accountsConfig',{
+ 		templateUrl: 'partials/accountsConfig.html',
+ 		controller:'AccountConfigController',
+ 		controllerAs:'AccountConfigCtrl'
+ 	}).
+ 	when('/myDocs',{
+ 		templateUrl: 'partials/myDocs.html',
+ 		controller:'MyDocsController',
+ 		controllerAs:'MyDocsConfigCtrl'
  	}).
 	otherwise({redirectTo: '/home'});
 };

@@ -29,7 +29,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="box-body">
-                <form role="form" name="profileForm">
+                <form role="form" name="profileForm" novalidate>
                   <!-- NOM -->
                 <div class="form-group">
                   <label>Prénom:</label>
@@ -37,8 +37,11 @@
                     <div class="input-group-addon">
                       <i class="fa fa-vcard"></i>
                     </div>
-                    <input type="text" class="form-control" ng-model="EditProfilCtrl.profile.value.firstName">
+                    <input type="text" name="firstName" class="form-control" ng-model="EditProfilCtrl.profile.value.firstName"  ng-minlength="2" ng-maxlength="20" required>
                   </div>
+                   <div ng-messages="profileForm.$error" style="color:red" role="alert">
+                    <div ng-messages="required">Vous devez renseigner votre nom</div>
+                    </div>
                   <!-- /.input group -->
                 </div>
                    <!-- NOM -->
@@ -49,7 +52,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-vcard"></i>
                     </div>
-                    <input  type="text" class="form-control" placeholder="Nom" ng-model="EditProfilCtrl.profile.value.lastName">
+                    <input  type="text" class="form-control" placeholder="Nom" ng-model="EditProfilCtrl.profile.value.lastName" required ng-maxlength="30">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -74,7 +77,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-home"></i>
                     </div>
-                    <input type="text" class="form-control" placeholder="Adresse" ng-model="EditProfilCtrl.profile.value.address">
+                    <input type="text" class="form-control" placeholder="Adresse" ng-model="EditProfilCtrl.profile.value.address" required>
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -86,7 +89,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-envelope"></i>
                     </div>
-                    <input type="email" class="form-control" placeholder="Email" ng-model="EditProfilCtrl.profile.value.email">
+                    <input type="email" class="form-control" placeholder="Email" ng-model="EditProfilCtrl.profile.value.email" required>
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -102,7 +105,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-phone"></i>
                     </div>
-                    <input type="text" class="form-control" data-inputmask='"mask": "99-99-99-99-99"' data-mask ng-model="EditProfilCtrl.profile.value.phone" required>
+                    <input type="text" class="form-control" data-inputmask='"mask": "99-99-99-99-99"' data-mask ng-model="EditProfilCtrl.profile.value.phone">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -146,7 +149,7 @@
                 <div class="row">
                   <button
                   class="btn btn-primary pull-right"
-                  type="submit" ng-click="EditProfilCtrl.updateProfile(EditProfilCtrl.profile.id,EditProfilCtrl.profile.value)">Enregistrer</button>
+                  type="submit" ng-click="EditProfilCtrl.updateProfile(EditProfilCtrl.profile.id,EditProfilCtrl.profile.value)" ng-disabled="profileForm.$invalid">Enregistrer</button>
                 </div>
 
               </div>
