@@ -39,6 +39,7 @@ function EditProfileController(CozySdk) {
          //console.log('////////////////',JSON.stringify(profileUpdated));  
          CozySdk.update('Profile', id, profileUpdated)
          .then(updateProfileList)
+         .then(window.location.href = '#/profile')
          .catch(function(error) {
              vm.error = error;
          });

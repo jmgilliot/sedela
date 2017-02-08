@@ -29,7 +29,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="box-body">
-                <form role="form" name="profileForm" novalidate>
+                <form role="form" name="profileForm">
                   <!-- NOM -->
                 <div class="form-group">
                   <label>Prénom:</label>
@@ -39,9 +39,14 @@
                     </div>
                     <input type="text" name="firstName" class="form-control" ng-model="EditProfilCtrl.profile.value.firstName"  ng-minlength="2" ng-maxlength="20" required>
                   </div>
-                   <div ng-messages="profileForm.$error" style="color:red" role="alert">
-                    <div ng-messages="required">Vous devez renseigner votre nom</div>
-                    </div>
+            
+                   <div ng-messages="profileForm.firstName.$error">
+                      <p ng-message="minlength" style="color:red" role="alert">Votre prénom est trop petit</p>
+                      <p ng-message="maxlength" style="color:red" role="alert">Votre prénom est trop long</p>
+                      <p ng-message="required" style="color:red" role="alert">Merci de renseigner votre prénom</p>
+                  </div>
+
+                   
                   <!-- /.input group -->
                 </div>
                    <!-- NOM -->
@@ -52,7 +57,12 @@
                     <div class="input-group-addon">
                       <i class="fa fa-vcard"></i>
                     </div>
-                    <input  type="text" class="form-control" placeholder="Nom" ng-model="EditProfilCtrl.profile.value.lastName" required ng-maxlength="30">
+                    <input  type="text" name=lastName class="form-control" placeholder="Nom" ng-model="EditProfilCtrl.profile.value.lastName" required ng-minlength="2" ng-maxlength="30">
+                  </div>
+                  <div ng-messages="profileForm.lastName.$error">
+                      <p ng-message="minlength" style="color:red" role="alert">Votre nom est trop petit</p>
+                      <p ng-message="maxlength" style="color:red" role="alert">Votre nom est trop long</p>
+                      <p ng-message="required" style="color:red" role="alert">Merci de renseigner votre nom</p>
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -65,10 +75,12 @@
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" placeholder="Date de naissance" id="datepicker" ng-model="EditProfilCtrl.profile.value.dateOfBirth" required>
+                    <input input type="text" class="form-control pull-right" id="datepicker" ng-model="EditProfilCtrl.profile.value.dateOfBirth" required>
+
                   </div>
                   <!-- /.input group -->
                 </div>
+                
 
                   <div class="form-group">
                   <label>Adresse:</label>

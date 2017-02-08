@@ -3,10 +3,10 @@
 // Declare app level module which depends on views, and components
 angular.module('portfolioapp', [
   'ngRoute',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngMessages'
 ]).
 config(appConfig);
-
 
 appConfig.$inject = ['$routeProvider'];
 
@@ -28,6 +28,11 @@ function appConfig($routeProvider){
  	}).
  	when('/stage',{
  		templateUrl: 'partials/stage.html',
+ 		controller:'StageController',
+ 		controllerAs:'StageCtrl'
+ 	}).
+ 	when('/infosStage',{
+ 		templateUrl: 'partials/infosStage.html',
  		controller:'StageController',
  		controllerAs:'StageCtrl'
  	}).
