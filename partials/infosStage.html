@@ -17,8 +17,12 @@
                 <button ng-click="StageCtrl.submit()" class="btn btn-primary">Ajouter une période de formation</button>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-10" ng-repeat="stuff in StageCtrl.stuffs"><h1>{{stuff.title}}</h1> <p>{{stuff.content}}</p></div>
+              <div class="panel panel-primary" ng-repeat="stuff in StageCtrl.stuffs">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Periode de stage</h3> </div>
+                <div class="panel-body" >
+                    <h1></h1>
+                </div>
             </div>
           </div>
         </section>

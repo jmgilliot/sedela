@@ -26,7 +26,7 @@
                       <label for="lastNameStudent" class="control-label">Nom</label>
                     </div>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Nom">
+                      <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.lastNameStudent" placeholder="Nom">
                     </div>
                   </div>
                   <div class="form-group">
@@ -34,7 +34,7 @@
                       <label for="firstName" class="control-label">Prénom</label>
                     </div>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Prénom">
+                      <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.firstNameStudent" placeholder="Prénom">
                     </div>
                   </div>
                   <div class="form-group">
@@ -42,7 +42,7 @@
                       <label for="emailStudent" class="control-label">Adresse email</label>
                     </div>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" placeholder="Adresse email">
+                      <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.emailStudent" placeholder="Adresse email">
                     </div>
                   </div>
 
@@ -51,7 +51,7 @@
                       <label for="address" class="control-label">Adresse</label>
                     </div>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Adresse">
+                      <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.addressStudent" placeholder="Adresse">
                     </div>
                   </div>
                   <div class="form-group">
@@ -59,7 +59,7 @@
                       <label for="formation" class="control-label">Formation</label>
                     </div>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Cycle de formation">
+                      <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.formation"  placeholder="Cycle de formation">
                     </div>
                   </div>
                   <div class="form-group">
@@ -67,7 +67,7 @@
                       <label for="job" class="control-label">Poste</label>
                     </div>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Poste occupé">
+                      <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.occupationStudent" placeholder="Poste occupé">
                     </div>
                   </div>
                 </form>
@@ -88,7 +88,7 @@
                       <label for="name" class="control-label">Nom</label>
                     </div>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Raison sociale">
+                      <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.social"  placeholder="Raison sociale">
                     </div>
                   </div>
                   <div class="form-group">
@@ -96,7 +96,7 @@
                       <label for="adressCompany" class="control-label">Adresse</label>
                     </div>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Adresse de l'entreprise">
+                      <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.addressCompany"  placeholder="Adresse de l'entreprise">
                     </div>
                   </div>
                   <div class="form-group">
@@ -104,7 +104,7 @@
                       <label for="activity" class="control-label">Domaine</label>
                     </div>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Domaine d'activité">
+                      <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.activity"  placeholder="Domaine d'activité">
                     </div>
                   </div>
 
@@ -128,40 +128,40 @@
               <div class="col-sm-2">
                 <label for="lastNameTut" class="control-label">Nom</label>
               </div>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="Nom">
+              <div class="col-sm-6">
+                <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.lastNameTut" placeholder="Nom">
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-2">
                 <label for="firstNameTut" class="control-label">Prénom</label>
               </div>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="Prénom">
+              <div class="col-sm-6">
+                <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.firstNameTut" placeholder="Prénom">
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-2">
                   <label for="emailTut" class="control-label">Adresse email</label>
               </div>
-              <div class="col-sm-10">
-                  <input type="email" class="form-control" placeholder="Adresse email">
+              <div class="col-sm-6">
+                  <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.emailTut" placeholder="Adresse email">
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-2">
                 <label for="telNumber" class="control-label">Téléphone</label>
               </div>
-              <div class="col-sm-10">
-                <input type="tel" class="form-control" placeholder="Telephone (+33 .. .. .. ..)">
+              <div class="col-sm-6">
+                <input type="tel" class="form-control" ng-model ="StageCtrl.stage.value.phoneTut" placeholder="Telephone (+33 .. .. .. ..)">
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-2">
                 <label for="fonctionTut" class="control-label">Fonction</label>
               </div>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="Fonction occupée">
+              <div class="col-sm-6">
+                <input type="text" class="form-control" ng-model ="StageCtrl.stage.value.occupationTut" placeholder="Fonction occupée">
               </div>
             </div>
           </form>
@@ -182,32 +182,12 @@
           <form class="form-horizontal text-center" role="form">
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
-                <a class="btn btn-lg btn-primary">Enregistrer mes infos générales</a>
+                <button
+                  class="btn btn-primary pull-right"
+                  type="submit" ng-click="StageCtrl.updateStage(StageCtrl.stage.id,StageCtrl.stage.value)">Enregistrer mes infos générales</button>
               </div>
             </div>
           </form>
-
-          <div class="box-header with-border">
-            <h3 class="box-title">
-              <p>Mes documents</p>
-            </h3>
-            </div>
-
-          <div class="box-header with-border">
-            <h3 class="box-title">
-              <p>Les périodes de stage</p>
-            </h3>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <button ng-click="StageCtrl.submit()" class="btn btn-primary">Ajouter une période de formation</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-10" ng-repeat="stuff in StageCtrl.stuffs"><h1>{{stuff.title}}</h1> <p>{{stuff.content}}</p></div>
-            </div>
-          </div>
         </section>
         <!-- /.content -->
       </div>
