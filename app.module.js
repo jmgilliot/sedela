@@ -46,5 +46,5 @@ function appConfig($routeProvider){
  		controller:'MyDocsController',
  		controllerAs:'MyDocsConfigCtrl'
  	}).
-	otherwise({redirectTo: '/home'});
+	otherwise({redirectTo: '/profile'});
 };
