@@ -1,3 +1,8 @@
+Multidisciplinary project SEDELA, aims to design, develop, experiment and evaluate an improved model of Self Regulated Learning Process, supported by Semantic Open Learner Models, Trusted collaborative services and an experimental infrastructure, in a lifelong learning and trusted perspective. 
+
+
+First prototype of experimental infrastructure is based on Cozy-cloud personal cloud and provides a portfolio application described below. 
+
 Description
 
 Cozy-Portfolio is a Cozy Cloud application which allows you to do a portfolio. This application was started as a student project of Cédric PATCHANE from Telecom Bretagne, you can read more about that in the wiki.
