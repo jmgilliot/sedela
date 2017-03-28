@@ -1,7 +1,7 @@
 Multidisciplinary project SEDELA, aims to design, develop, experiment and evaluate an improved model of Self Regulated Learning Process, supported by Semantic Open Learner Models, Trusted collaborative services and an experimental infrastructure, in a lifelong learning and trusted perspective. 
 
 
-First prototype of experimental infrastructure is based on Cozy-cloud personal cloud and provides a portfolio application described below. 
+First prototype of experimental infrastructure is based on Cozy-cloud personal cloud and provides a portfolio application described below. This first attempt is simply a Proof Of Concept.
 
 Description
 
